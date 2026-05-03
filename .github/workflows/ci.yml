@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check script syntax
+        run: python3 -m py_compile scripts/*.py
+      - name: Build and validate sample deck
+        run: |
+          python3 scripts/build_apkg.py \
+            --cards examples/cards.sample.json \
+            --out example.apkg \
+            --deck-name "Example Deck"
+          python3 scripts/validate_apkg.py example.apkg

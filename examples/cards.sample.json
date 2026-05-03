@@ -1,0 +1,17 @@
+[
+  {
+    "type": "qa",
+    "front": "What is active recall?",
+    "back": "A study method where you retrieve an answer from memory before checking it.",
+    "source_page": 1,
+    "tags": ["study", "memory"]
+  },
+  {
+    "type": "term",
+    "term": "osmotic pressure",
+    "definition": "Pressure required to prevent solvent flow through a semipermeable membrane.",
+    "source_page": 2,
+    "deck_path": "Science",
+    "tags": ["biology", "definition"]
+  }
+]

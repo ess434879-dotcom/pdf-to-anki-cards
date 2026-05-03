@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+*.apkg
+*.anki2
+*.anki21
+*.sqlite
+*.db
+build/
+dist/
+*.egg-info/
+extracted*.json
+inspect*.json
+generated-audio/
+tmp/
