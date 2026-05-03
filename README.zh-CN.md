@@ -10,6 +10,8 @@
 
 **PDF to Anki Cards** 是一个面向 Claude Code / Codex 的 Skill，也是一个 Python 工具集，用于把 PDF 学习资料转换成可直接导入 Anki 的牌组。它将 Agent 辅助制卡和确定性的 `.apkg` 构建/校验脚本结合起来，让生成的卡片能够可靠保留模板、媒体、音频和 Anki 包元数据。
 
+本项目是一个完全的 vibe coding 项目：初始工作流、实现代码、文档和仓库包装都通过人类主导的 AI 编程会话完成。
+
 ## 功能特性
 
 - 从 PDF 中提取文本和词汇表。

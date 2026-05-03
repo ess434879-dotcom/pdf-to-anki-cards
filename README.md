@@ -10,6 +10,8 @@ This repository packages a reusable AI-agent skill plus deterministic helper scr
 
 **PDF to Anki Cards** is a Claude Code/Codex skill and Python toolkit for turning PDF study materials into import-ready Anki decks. It combines agent-guided card generation with deterministic `.apkg` building and validation scripts, so generated cards can preserve templates, media, audio, and Anki package metadata reliably.
 
+This project is a full-on vibe coding project: the initial workflow, implementation, documentation, and repository packaging were produced through human-directed AI coding sessions.
+
 ## What It Does
 
 - Extracts text and vocabulary tables from PDFs.

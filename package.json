@@ -2,6 +2,14 @@
   "name": "pdf-to-anki-cards",
   "version": "0.1.0",
   "description": "A Claude Code/Codex skill and Python toolkit for turning PDFs into validated Anki .apkg decks.",
+  "keywords": [
+    "anki",
+    "pdf",
+    "claude-code",
+    "codex",
+    "skill",
+    "vibe-coding"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/ess434879-dotcom/pdf-to-anki-cards#readme",
   "repository": {
