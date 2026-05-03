@@ -6,6 +6,10 @@ Convert PDFs, vocabulary lists, lecture notes, textbook pages, formulas, and ima
 
 This repository packages a reusable AI-agent skill plus deterministic helper scripts. It grew out of a real PDF-to-Anki workflow where preserving Anki package details mattered: note models, templates, media mappings, and the protobuf `meta` file all need to be handled carefully for smooth import.
 
+## Repository Description
+
+**PDF to Anki Cards** is a Claude Code/Codex skill and Python toolkit for turning PDF study materials into import-ready Anki decks. It combines agent-guided card generation with deterministic `.apkg` building and validation scripts, so generated cards can preserve templates, media, audio, and Anki package metadata reliably.
+
 ## What It Does
 
 - Extracts text and vocabulary tables from PDFs.
@@ -21,6 +25,9 @@ This repository packages a reusable AI-agent skill plus deterministic helper scr
 ```text
 .
 ├── SKILL.md                         # Agent skill instructions
+├── package.json                     # npm/npx install metadata
+├── bin/
+│   └── pdf-to-anki-cards.js         # npm installer CLI
 ├── scripts/
 │   ├── inspect_apkg.py              # Inspect reference Anki packages
 │   ├── extract_pdf_content.py       # Extract text and vocab tables from PDFs
@@ -33,12 +40,28 @@ This repository packages a reusable AI-agent skill plus deterministic helper scr
 │   └── content-modes.md             # Supported content modes
 ├── docs/
 │   ├── INSTALL.md                   # Install as Claude Code/Codex skill
+│   ├── INSTALL.zh-CN.md             # Chinese installation guide
 │   └── USAGE.md                     # Command examples
 └── examples/
     └── cards.sample.json            # Minimal card JSON example
 ```
 
 ## Quick Start
+
+Install as an agent skill with npm/npx:
+
+```bash
+npx github:ess434879-dotcom/pdf-to-anki-cards install --target claude
+```
+
+or install globally from GitHub:
+
+```bash
+npm install -g github:ess434879-dotcom/pdf-to-anki-cards
+pdf-to-anki-cards install --target claude
+```
+
+See [docs/INSTALL.md](docs/INSTALL.md) for Claude Code, Codex, Git, and npm installation options.
 
 Create a tiny example deck:
 

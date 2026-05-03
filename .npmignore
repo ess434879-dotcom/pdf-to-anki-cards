@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.git/
+.github/
+.pytest_cache/
+.pycache-test/
+*.apkg
+*.anki2
+*.anki21
+*.sqlite
+*.db
+generated-audio/
+tmp/

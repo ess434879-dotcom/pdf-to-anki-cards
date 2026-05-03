@@ -6,6 +6,10 @@
 
 这个仓库包含一个可复用的 AI Agent Skill，以及一组确定性脚本。它来自一次真实的 PDF 转 Anki 工作流：要让 Anki 顺利导入，必须认真处理 note model、卡片模板、媒体映射，以及 protobuf 格式的 `meta` 文件。
 
+## 仓库简介
+
+**PDF to Anki Cards** 是一个面向 Claude Code / Codex 的 Skill，也是一个 Python 工具集，用于把 PDF 学习资料转换成可直接导入 Anki 的牌组。它将 Agent 辅助制卡和确定性的 `.apkg` 构建/校验脚本结合起来，让生成的卡片能够可靠保留模板、媒体、音频和 Anki 包元数据。
+
 ## 功能特性
 
 - 从 PDF 中提取文本和词汇表。
@@ -21,6 +25,9 @@
 ```text
 .
 ├── SKILL.md                         # Agent skill 指令
+├── package.json                     # npm/npx 安装元数据
+├── bin/
+│   └── pdf-to-anki-cards.js         # npm 安装 CLI
 ├── scripts/
 │   ├── inspect_apkg.py              # 检查参考 Anki 包
 │   ├── extract_pdf_content.py       # 从 PDF 提取文本和词表
@@ -33,12 +40,28 @@
 │   └── content-modes.md             # 支持的内容模式
 ├── docs/
 │   ├── INSTALL.md                   # 作为 Claude Code/Codex skill 安装
+│   ├── INSTALL.zh-CN.md             # 中文安装教程
 │   └── USAGE.md                     # 命令示例
 └── examples/
     └── cards.sample.json            # 最小卡片 JSON 示例
 ```
 
 ## 快速开始
+
+使用 npm/npx 安装为 Agent Skill：
+
+```bash
+npx github:ess434879-dotcom/pdf-to-anki-cards install --target claude
+```
+
+或从 GitHub 全局安装：
+
+```bash
+npm install -g github:ess434879-dotcom/pdf-to-anki-cards
+pdf-to-anki-cards install --target claude
+```
+
+Claude Code、Codex、Git 和 npm 安装方式详见 [docs/INSTALL.zh-CN.md](docs/INSTALL.zh-CN.md)。
 
 创建一个最小示例牌组：
 
@@ -136,7 +159,7 @@ python3 scripts/validate_apkg.py generated.apkg
 Use pdf-to-anki-cards to convert this PDF into an Anki deck.
 ```
 
-安装方式见 [docs/INSTALL.md](docs/INSTALL.md)。
+安装方式见 [docs/INSTALL.zh-CN.md](docs/INSTALL.zh-CN.md)。
 
 ## 当前状态
 

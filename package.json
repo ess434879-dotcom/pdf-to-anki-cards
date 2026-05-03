@@ -1,0 +1,36 @@
+{
+  "name": "pdf-to-anki-cards",
+  "version": "0.1.0",
+  "description": "A Claude Code/Codex skill and Python toolkit for turning PDFs into validated Anki .apkg decks.",
+  "license": "MIT",
+  "homepage": "https://github.com/ess434879-dotcom/pdf-to-anki-cards#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ess434879-dotcom/pdf-to-anki-cards.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ess434879-dotcom/pdf-to-anki-cards/issues"
+  },
+  "bin": {
+    "pdf-to-anki-cards": "bin/pdf-to-anki-cards.js"
+  },
+  "files": [
+    "SKILL.md",
+    "scripts",
+    "references",
+    "docs",
+    "examples",
+    "bin",
+    "README.md",
+    "README.en.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "requirements.txt"
+  ],
+  "scripts": {
+    "test": "PYTHONPYCACHEPREFIX=.pycache-test python3 -m py_compile scripts/*.py && python3 scripts/build_apkg.py --cards examples/cards.sample.json --out example.apkg --deck-name \"Example Deck\" && python3 scripts/validate_apkg.py example.apkg && rm -rf .pycache-test example.apkg"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
